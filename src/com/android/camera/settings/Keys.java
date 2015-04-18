@@ -42,6 +42,7 @@ public class Keys {
     public static final String KEY_FOCUS_MODE = "pref_camera_focusmode_key";
     public static final String KEY_FLASH_MODE = "pref_camera_flashmode_key";
     public static final String KEY_VIDEOCAMERA_FLASH_MODE = "pref_camera_video_flashmode_key";
+    public static final String KEY_VIDEOCAMERA_SAMSUNG4K_MODE = "pref_camera_video_samsung4k_key";
     public static final String KEY_SCENE_MODE = "pref_camera_scenemode_key";
     public static final String KEY_EXPOSURE = "pref_camera_exposure_key";
     public static final String KEY_VIDEO_EFFECT = "pref_video_effect_key";
@@ -73,6 +74,8 @@ public class Keys {
     public static final String KEY_HDR_PLUS_FLASH_MODE = "pref_hdr_plus_flash_mode";
     public static final String KEY_SHOULD_SHOW_SETTINGS_BUTTON_CLING =
             "pref_should_show_settings_button_cling";
+    public static final String KEY_POWER_SHUTTER = "pref_power_shutter";
+    public static final String KEY_MAX_BRIGHTNESS = "pref_max_brightness";
 
     /**
      * Set some number of defaults for the defined keys.
@@ -210,6 +213,22 @@ public class Keys {
     public static boolean areGridLinesOn(SettingsManager settingsManager) {
         return settingsManager.getBoolean(SettingsManager.SCOPE_GLOBAL,
                                           KEY_CAMERA_GRID_LINES);
+    }
+
+    /**
+     * Returns whether power shutter is set on.
+     */
+    public static boolean isPowerShutterOn(SettingsManager settingsManager) {
+        return settingsManager.getBoolean(SettingsManager.SCOPE_GLOBAL,
+                KEY_POWER_SHUTTER);
+    }
+
+    /**
+     * Returns whether max brightness is set on.
+     */
+    public static boolean isMaxBrightnessOn(SettingsManager settingsManager) {
+        return settingsManager.getBoolean(SettingsManager.SCOPE_GLOBAL,
+                KEY_MAX_BRIGHTNESS);
     }
 
     /**
